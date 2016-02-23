@@ -1,0 +1,25 @@
+{
+  "name": "todogistcli",
+  "version": "1.0.0",
+  "description": "a nodejs cli for to-do list management stored in a github gist",
+  "main": "todo.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/wdalrymple/todogistcli.git"
+  },
+  "keywords": [
+    "nodejs",
+    "todo",
+    "gist",
+    "cli"
+  ],
+  "author": "Matthew Dalrymple",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/wdalrymple/todogistcli/issues"
+  },
+  "homepage": "https://github.com/wdalrymple/todogistcli#readme"
+}
