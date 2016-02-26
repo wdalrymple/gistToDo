@@ -32,3 +32,9 @@ todo$ <command>
 |check|Check/Uncheck tasks in the current list|[taskId] {optional task number to check off, else, a check list is provided}| 
 |load|Load and set a ToDo list from known gists that follow the pattern gistToDo-{title}.md||
 |delete|Delete a task.|[taskId] {optional task number to delete, else a list of tasks for deletion will be provided}|
+
+##Future Enhancements##
+- Add local/offline storage if github is unavailable
+- Add a configuration item to point to a non github.com instance of github
+- Add due dates and reminders
+- I hate that octonode is just all callbacks, take the time to re-wrap it into promises
