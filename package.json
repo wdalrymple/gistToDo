@@ -1,6 +1,6 @@
 {
   "name": "gist-to-do",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "A nodejs cli for to-do list management stored in github gists",
   "main": "todo.js",
   "scripts": {

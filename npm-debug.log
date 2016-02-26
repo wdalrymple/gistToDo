@@ -1,100 +1,29 @@
 0 info it worked if it ends with ok
 1 verbose cli [ 'C:\\Program Files\\nodejs\\\\node.exe',
 1 verbose cli   'C:\\Program Files\\nodejs\\node_modules\\npm\\bin\\npm-cli.js',
-1 verbose cli   'publish',
-1 verbose cli   './' ]
+1 verbose cli   'version',
+1 verbose cli   'patch' ]
 2 info using npm@2.11.3
 3 info using node@v0.12.7
-4 verbose publish [ './' ]
-5 silly cache add args [ './', null ]
-6 verbose cache add spec ./
-7 silly cache add parsed spec { raw: './',
-7 silly cache add   scope: null,
-7 silly cache add   name: null,
-7 silly cache add   rawSpec: './',
-7 silly cache add   spec: 'C:\\dev\\todogistcli',
-7 silly cache add   type: 'directory' }
-8 verbose addLocalDirectory C:\Users\matt\AppData\Roaming\npm-cache\gistToDo\1.0.0\package.tgz not in flight; packing
-9 verbose tar pack [ 'C:\\Users\\matt\\AppData\\Roaming\\npm-cache\\gistToDo\\1.0.0\\package.tgz',
-9 verbose tar pack   'C:\\dev\\todogistcli' ]
-10 verbose tarball C:\Users\matt\AppData\Roaming\npm-cache\gistToDo\1.0.0\package.tgz
-11 verbose folder C:\dev\todogistcli
-12 info prepublish gistToDo@1.0.0
-13 verbose addLocalTarball adding from inside cache C:\Users\matt\AppData\Roaming\npm-cache\gistToDo\1.0.0\package.tgz
-14 silly cache afterAdd gistToDo@1.0.0
-15 verbose afterAdd C:\Users\matt\AppData\Roaming\npm-cache\gistToDo\1.0.0\package\package.json not in flight; writing
-16 verbose afterAdd C:\Users\matt\AppData\Roaming\npm-cache\gistToDo\1.0.0\package\package.json written
-17 silly publish { name: 'gistToDo',
-17 silly publish   version: '1.0.0',
-17 silly publish   description: 'A nodejs cli for to-do list management stored in github gists',
-17 silly publish   main: 'todo.js',
-17 silly publish   scripts: { test: 'echo "Error: no test specified" && exit 1' },
-17 silly publish   repository:
-17 silly publish    { type: 'git',
-17 silly publish      url: 'git+https://github.com/wdalrymple/gistToDo.git' },
-17 silly publish   keywords: [ 'nodejs', 'todo', 'gist', 'cli' ],
-17 silly publish   author: { name: 'Matthew Dalrymple' },
-17 silly publish   license: 'MIT',
-17 silly publish   bugs: { url: 'https://github.com/wdalrymple/gistToDo/issues' },
-17 silly publish   homepage: 'https://github.com/wdalrymple/gistToDo#readme',
-17 silly publish   dependencies:
-17 silly publish    { dateformat: '^1.0.12',
-17 silly publish      octonode: '^0.7.4',
-17 silly publish      open: '0.0.5',
-17 silly publish      vorpal: '^1.9.5' },
-17 silly publish   readme: '#Gist To-Do CLI\r\n##Depdenencies##\r\n- octonode\r\n- vorpal\r\n- open\r\n\r\n##Installation##\r\n```javascript\r\n$ npm install gistToDo\r\n```\r\n\r\n##Useage##\r\n\r\nTo start the console:\r\n```javscript\r\n$ node todo\r\n```\r\n\r\nTo use the console:\r\n```javascript\r\ntodo$ <command>\r\n```\r\n\r\n|Command|Description|Options|\r\n|---|---|---|\r\n|login|Login with your github credentials (userid/password). These are cached locally.||\r\n|whoami|Ouput the userid of the currently logged in user||\r\n|list|List known gists that follow the pattern gistToDo-{title}.md|| \r\n|show|Display the current ToDo list loaded|\\-v (--verbose) {open the gist in the browser}|\r\n|create|Create a new ToDo List|title {the title for the ToDo list and used in the gist file name}|\r\n|add|Add a new task|task {the text for a new task, encapsulate in "" if its more than one word}| \r\n|check|Check/Uncheck tasks in the current list|[taskId] {optional task number to check off, else, a check list is provided}| \r\n|load|Load and set a ToDo list from known gists that follow the pattern gistToDo-{title}.md||\r\n|delete|Delete a task.|[taskId] {optional task number to delete, else a list of tasks for deletion will be provided}|\r\n',
-17 silly publish   readmeFilename: 'README.md',
-17 silly publish   gitHead: '34adb13043b39519e2f8a39e6943094d0a042477',
-17 silly publish   _id: 'gistToDo@1.0.0',
-17 silly publish   _shasum: 'de5da13f2a20d5af0c1bd47ab54bb0a49793c7e8',
-17 silly publish   _from: '.' }
-18 verbose getPublishConfig undefined
-19 silly mapToRegistry name gistToDo
-20 silly mapToRegistry using default registry
-21 silly mapToRegistry registry https://registry.npmjs.org/
-22 silly mapToRegistry uri https://registry.npmjs.org/gistToDo
-23 verbose publish registryBase https://registry.npmjs.org/
-24 silly publish uploading C:\Users\matt\AppData\Roaming\npm-cache\gistToDo\1.0.0\package.tgz
-25 verbose request uri https://registry.npmjs.org/gistToDo
-26 verbose request sending authorization for write operation
-27 info attempt registry request try #1 at 10:29:53 AM
-28 verbose request using bearer token for auth
-29 verbose request id 00b56e022cc342c4
-30 http request PUT https://registry.npmjs.org/gistToDo
-31 http 400 https://registry.npmjs.org/gistToDo
-32 verbose headers { 'content-type': 'application/json',
-32 verbose headers   'cache-control': 'max-age=300',
-32 verbose headers   'content-length': '54',
-32 verbose headers   'accept-ranges': 'bytes',
-32 verbose headers   date: 'Fri, 26 Feb 2016 15:29:54 GMT',
-32 verbose headers   via: '1.1 varnish',
-32 verbose headers   connection: 'keep-alive',
-32 verbose headers   'x-served-by': 'cache-dfw1831-DFW',
-32 verbose headers   'x-cache': 'MISS',
-32 verbose headers   'x-cache-hits': '0',
-32 verbose headers   'x-timer': 'S1456500593.639200,VS0,VE782' }
-33 verbose request invalidating C:\Users\matt\AppData\Roaming\npm-cache\registry.npmjs.org\gistToDo on PUT
-34 error publish Failed PUT 400
-35 verbose stack Error: name can no longer contain capital letters : gistToDo
-35 verbose stack     at CachingRegistryClient.<anonymous> (C:\Program Files\nodejs\node_modules\npm\node_modules\npm-registry-client\lib\request.js:247:14)
-35 verbose stack     at Request._callback (C:\Program Files\nodejs\node_modules\npm\node_modules\npm-registry-client\lib\request.js:170:14)
-35 verbose stack     at Request.self.callback (C:\Program Files\nodejs\node_modules\npm\node_modules\request\request.js:354:22)
-35 verbose stack     at Request.emit (events.js:110:17)
-35 verbose stack     at Request.<anonymous> (C:\Program Files\nodejs\node_modules\npm\node_modules\request\request.js:1207:14)
-35 verbose stack     at Request.emit (events.js:129:20)
-35 verbose stack     at IncomingMessage.<anonymous> (C:\Program Files\nodejs\node_modules\npm\node_modules\request\request.js:1153:12)
-35 verbose stack     at IncomingMessage.emit (events.js:129:20)
-35 verbose stack     at _stream_readable.js:908:16
-35 verbose stack     at process._tickCallback (node.js:355:11)
-36 verbose statusCode 400
-37 verbose pkgid gistToDo
-38 verbose cwd C:\dev\todogistcli
-39 error Windows_NT 6.3.9600
-40 error argv "C:\\Program Files\\nodejs\\\\node.exe" "C:\\Program Files\\nodejs\\node_modules\\npm\\bin\\npm-cli.js" "publish" "./"
-41 error node v0.12.7
-42 error npm  v2.11.3
-43 error code E400
-44 error name can no longer contain capital letters : gistToDo
-45 error If you need help, you may report this error at:
-45 error     <https://github.com/npm/npm/issues>
-46 verbose exit [ 1, true ]
+4 info preversion gist-to-do@1.0.1
+5 info git [ 'status', '--porcelain' ]
+6 verbose stack Error: Error: Git working directory not clean.
+6 verbose stack M npm-debug.log
+6 verbose stack     at C:\Program Files\nodejs\node_modules\npm\lib\version.js:71:23
+6 verbose stack     at C:\Program Files\nodejs\node_modules\npm\lib\version.js:151:34
+6 verbose stack     at ChildProcess.exithandler (child_process.js:742:7)
+6 verbose stack     at ChildProcess.emit (events.js:110:17)
+6 verbose stack     at maybeClose (child_process.js:1015:16)
+6 verbose stack     at Socket.<anonymous> (child_process.js:1183:11)
+6 verbose stack     at Socket.emit (events.js:107:17)
+6 verbose stack     at Pipe.close (net.js:485:12)
+7 verbose cwd C:\dev\todogistcli
+8 error Windows_NT 6.3.9600
+9 error argv "C:\\Program Files\\nodejs\\\\node.exe" "C:\\Program Files\\nodejs\\node_modules\\npm\\bin\\npm-cli.js" "version" "patch"
+10 error node v0.12.7
+11 error npm  v2.11.3
+12 error Error: Git working directory not clean.
+12 error M npm-debug.log
+13 error If you need help, you may report this error at:
+13 error     <https://github.com/npm/npm/issues>
+14 verbose exit [ 1, true ]
