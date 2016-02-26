@@ -6,7 +6,7 @@
 
 ##Installation##
 ```javascript
-$ npm install gistToDo
+$ npm install gist-to-do
 ```
 
 ##Useage##
