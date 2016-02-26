@@ -3,3 +3,8 @@ node_modules
 
 #optional npm cache directory
 .npm
+
+# Logs
+logs
+*.log
+npm-debug.log*
