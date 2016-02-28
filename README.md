@@ -32,6 +32,8 @@ todo$ <command>
 |check|Check/Uncheck tasks in the current list|[taskId] {optional task number to check off, else, a check list is provided}| 
 |load|Load and set a ToDo list from known gists that follow the pattern gistToDo-{title}.md||
 |delete|Delete a task.|[taskId] {optional task number to delete, else a list of tasks for deletion will be provided}|
+|archive|archive all checked tasks||
+
 
 ##Future Enhancements##
 - Add local/offline storage if github is unavailable
