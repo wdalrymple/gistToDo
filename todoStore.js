@@ -43,8 +43,8 @@ module.exports.currentToDo = {
  
 module.exports = {
   config:{
-    githubURL:""
-  },  
+    githubURL:""    
+  },
   currentToDo: {
     id:"",
     title:"",
