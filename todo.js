@@ -3,7 +3,6 @@ var dateformat = require('dateformat');
 var todoStore = require('./todoStore.js');
 var open = require('open');
 
-
 //pretty print the currently loaded todolist in the store
 var prettyPrint = function(v){
   var todo = todoStore.currentToDo;
@@ -15,6 +14,36 @@ var prettyPrint = function(v){
       self.log(i+1 + ". (" + (todo.list[i].checked?"*":" ") + ") " + todo.list[i].name);
   }  
 };
+
+//configure the gist-to-do cli
+vorpal
+  .command('config', 'Set configuration options.')
+    .option('-g, --githubURL', 'Overrirde the github url.')
+    .option('-l, --list','List the current set configuraiton settings.')
+    .option('-c, --clear','Clear all preset configurations.')
+    .action(function(args, callback) {
+     const self = this;          
+     if (args.options.githubURL) {
+        //set hte local store to use the github url proxy provided       
+        todoStore.setGitHubURL(args.options.githubURL);
+        //cache the url to remember it
+        vorpal.localStorage.setItem('githubURL',args.options.githubURL);       
+     }
+     if (args.options.clear) {
+       //remove the local proxy setting       
+        todoStore.setGitHubURL('');
+        //clear out all configuration options
+        vorpal.localStorage.setItem('githubURL','');       
+     }
+     if(args.options.list){
+       //list out the known configuration options
+       self.log("Options");
+       self.log("-------");
+       var githubUrl= vorpal.localStorage.getItem('githubURL');
+       self.log("githubURL: " +  githubUrl );
+     }
+     callback();    
+  });
  
 //create a new todo list
 vorpal
@@ -338,3 +367,8 @@ vorpal
   .localStorage('todo')
   .delimiter('todogist$')
   .show();
+  
+//set up the default settings    
+if(vorpal.localStorage.getItem('githubURL')!=null && vorpal.localStorage.getItem('githubURL')!=""){  
+  todoStore.setGitHubURL(vorpal.localStorage.getItem('githubURL'));
+}

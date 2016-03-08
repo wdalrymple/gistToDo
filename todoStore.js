@@ -41,12 +41,22 @@ module.exports.currentToDo = {
 - [ ] Task2
 */ 
  
-module.exports = {  
+module.exports = {
+  config:{
+    githubURL:""
+  },  
   currentToDo: {
     id:"",
     title:"",
     url:"",
     list:[]
+  },
+  setGitHubURL:function(url){
+    module.exports.config.githubURL = url;
+    //if there is a client already defined, then update the proxy
+    if(!client){
+      client.requestDefaults['proxy'] = module.exports.config.githubURL;
+    }
   },  
   toMarkdown: function(){
     var result ='';
@@ -62,6 +72,10 @@ module.exports = {
         username: userid,
         password: password
       });
+      //set the proxy url if it has been set
+      if(module.exports.config.githubURL!= null && module.exports.config.githubURL!=""){
+          client.requestDefaults['proxy'] = module.exports.config.githubURL;
+      }
       ghgist = client.gist();
     }catch(e){
       throw e;
