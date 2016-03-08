@@ -36,6 +36,5 @@ todo$ <command>
 
 ##Future Enhancements##
 - Add local/offline storage if github is unavailable
-- Add a configuration item to point to a non github.com instance of github
 - Add due dates and reminders
 - I hate that octonode is just all callbacks, take the time to re-wrap it into promises
