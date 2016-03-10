@@ -1,5 +1,7 @@
 #Gist To-Do CLI
 
+[![NPM](https://nodei.co/npm/gist-to-do.png)](https://npmjs.org/package/gist-to-do)
+
 ##Overview##
 
 This is a simple nodejs CLI (command line interface) for managing to-do tasks.
