@@ -1,6 +1,6 @@
 #Gist To-Do CLI
 
-[![NPM](https://nodei.co/npm/gist-to-do.png)](https://npmjs.org/package/gist-to-do)
+[![NPM](https://nodei.co/npm/gist-to-do.png)](https://nodei.co/npm/gist-to-do/)
 
 ##Overview##
 
