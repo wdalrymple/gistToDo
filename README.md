@@ -1,4 +1,13 @@
 #Gist To-Do CLI
+
+##Overview##
+
+This is a simple nodejs CLI (command line interface) for managing to-do tasks.
+
+Task lists map to github gists and take advancage of githubs markdown support for check boxes.
+
+Comments, feature requests, issues are all welcome :D
+
 ##Depdenencies##
 - octonode
 - vorpal
