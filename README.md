@@ -32,7 +32,12 @@ todo$ <command>
 |check|Check/Uncheck tasks in the current list|[taskId] {optional task number to check off, else, a check list is provided}| 
 |load|Load and set a ToDo list from known gists that follow the pattern gistToDo-{title}.md||
 |delete|Delete a task.|[taskId] {optional task number to delete, else a list of tasks for deletion will be provided}|
+<<<<<<< HEAD
 |config|Configure options for cli.|\-g (--gitHubURL) [url]{set github url proxy, useful for enterpeise}, \-l (--list){list set configuration}, \-c (--clear) {clear out any set configurations} 
+=======
+|archive|archive all checked tasks||
+
+>>>>>>> 51694f2e1a903a7114c991a8913ad1c256783814
 
 ##Future Enhancements##
 - Add local/offline storage if github is unavailable
